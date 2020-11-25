@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://unpkg.com/gpu.js@latest/dist/gpu-browser.min.js"></script>
+        <script src="whammy.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="controls">
+            <button onclick="render()">render</button>
+            <input type="number" placeholder="Frames" id="frames"></input>
+            <input type="number" placeholder="Framerate" id="framerate"></input>
+            <input type="text" placeholder="Resolution" id="resolution"></input>
+        </div>
+        <div id="defaults">
+            <button onclick="setSettings(30,'1280x720')">720p 30fps</button>
+            <button onclick="setSettings(60,'1280x720')">720p 60fps</button>
+            <button onclick="setSettings(30,'1920x1080')">1080p 30fps</button>
+            <button onclick="setSettings(60,'1920x1080')">1080p 60fps</button>
+        </div>
+        <canvas id="canvas" width="0" height="0"></canvas>
+        <p id="log"></p>
+        <video id="video" type="video/webm" controls style="display: none;"></video>
+
+    </body>
+</html>
